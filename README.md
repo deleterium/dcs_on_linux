@@ -67,6 +67,16 @@ If your game crashes in the Steam version, it will permanently fail to start
 after that. To fix that: remove `drive_c/windows/system32/lsteamclient.dll`
 which was created in the crash, and the game should start back up fine.
 
+#### Avoiding launcher window - black screen at startup
+Starting from DCS 2.9.6.57650 a launcher window was added. But this feature does not work with proton. To bypass this window:
+1) Launch the game, wait for for the black window, then close the window (Alt + F4)
+2) Copy the simple template file `options.lua` in this repository to your folder
+`/home/you/.local/share/steamapps/compatdata/223750/pfx/drive_c/users/steamuser/Saved Games/DCS/Config/options.lua`
+3) Launch the game. It shall open in a small window. Go the the options (gear icon
+in top) and select manually your screen resolution and maybe try other configurations.
+4) If the resolution (or maybe some config) is not supported and the game does not launch,
+use the simple template file `options.lua` again.
+
 #### Open Beta (updated for 2.5.6.59398)
 
 For now, this guide assumes you use the standalone version. The steam version
