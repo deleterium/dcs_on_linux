@@ -5,10 +5,8 @@ work to get running. The game has two distribution methods: standalone and
 Steam. Both have worked successfully, though often one will be broken and the
 other work; if one fails, it can be a good idea to try the other.
 
-The game also has two versions: stable and OpenBeta. OpenBeta is used
-by most MP servers, and stable is updated less frequently (the advantage of
-stable for us being that we don't have to work around Linux bugs every 2 weeks
-when a new OB is released.)
+The game also has multiple versions if you have closed alpha or closed beta access.
+OpenBeta no longer exists. If you dont know what this means, you will be using stable.
 
 Thanks to everyone who has helped getting the game running and debugging issues
 in the [proton issue
@@ -89,10 +87,10 @@ First, some variables to avoid repetition:
 - `$USERNAME`: refers to the wine user. On standalone, this is your normal
   username and on steam it is `steamuser`.
 - `$INSTALL_DIR`: the location in program files where the game is installed.
-  On standalone: `drive_c/Program Files/Eagle Dynamics/DCS` or `DCS World OpenBeta`. On Steam, it's
+  On standalone: `drive_c/Program Files/Eagle Dynamics/DCS` or `DCS World ClosedBeta`. On Steam, it's
   `/home/frans/.local/share/Steam/steamapps/common/DCSWorld`
 - `$CONFIG_DIR`: the place where user config stuff is stored
-  `drive_c/users/$USERNAME/Saved Games/DCS<possibly openbeta>`.
+  `drive_c/users/$USERNAME/Saved Games/DCS<possibly closedbeta>`.
 - `$LOG`: the game log file `$CONFIG_DIR/Logs/dcs.log`.
 
 You need
@@ -124,7 +122,7 @@ proton versions, but not GE or TKG)
 ## Known issues and fixes
 
 If things go wrong, the primary thing to look for is the game log - 
-`drive_c/users/$USERNAME/Saved Games/DCS<possibly openbeta>/Logs/dcs.log`.
+`drive_c/users/$USERNAME/Saved Games/DCS<possibly closedbeta>/Logs/dcs.log`.
 After crashes, the crash reporter will spam a bit about various DLLs being used
 recently, and just before that, the cause of the crash should be visible.
 
