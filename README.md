@@ -5,11 +5,6 @@ work to get running. The game has two distribution methods: standalone and
 Steam. Both have worked successfully, though often one will be broken and the
 other work; if one fails, it can be a good idea to try the other.
 
-The game also has two versions: stable and OpenBeta. OpenBeta is used
-by most MP servers, and stable is updated less frequently (the advantage of
-stable for us being that we don't have to work around Linux bugs every 2 weeks
-when a new OB is released.)
-
 Thanks to everyone who has helped getting the game running and debugging issues
 in the [proton issue
 tracker](https://github.com/ValveSoftware/Proton/issues/1722). Unfortunately,
