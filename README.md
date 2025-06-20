@@ -135,6 +135,12 @@ this by starting them from a terminal.
 If you can't find an issue, or have found a solution for one, please discuss it in
 the [proton issue](https://github.com/ValveSoftware/Proton/issues/1722).
 
+## fx_5_0 error shaders not compiling
+This is usually caused by d3dcompiler being missing or obsolete.
+Make sure you have d3dcompiler_47 installed.
+If it was installed much time ago, maybe you need to update it.
+To force update, use protontricks command `protontricks 223750 -f d3dcompiler_47` or if you have protontricks as flatpak `flatpak run com.github.Matoking.protontricks 223750 -f d3dcompiler_47`.
+
 ### White smoke and some other particles renders weirdly
 
 This is a long standing issue, most likely related to texture loading and tesselation. 
