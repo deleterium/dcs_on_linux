@@ -105,10 +105,12 @@ flag https://wiki.winehq.org/Wine_User's_Guide#WINEDLLOVERRIDES.3DDLL_Overrides
 ```
 WINEDLLOVERRIDES='wbemprox=n;msdmo=n'
 ```
+#### Black Screen On Game Startup
 
-With that change, you should be able to log in but once the game starts you
-will see a black screen. To fix this, create a symlink from
+You should be able to log in, but once the game starts you will see a black screen. To fix this, create a symlink from
 `$INSTALL_DIR/bin/webrtc_plugin.dll` to `$INSTALL_dir/webrtc_plugin.dll`.
+
+After restarting the game, if there is still a black screeen on game startup, remove the dll override for `msdmo`, leaving only the override for `wbemprox`.
 
 The game should now start.
 
