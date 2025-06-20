@@ -5,6 +5,9 @@ work to get running. The game has two distribution methods: standalone and
 Steam. Both have worked successfully, though often one will be broken and the
 other work; if one fails, it can be a good idea to try the other.
 
+If you plan to use standalone version, jump to https://github.com/budderpard/DCS_Standalone_on_linux repository.
+Although many problems are common in both type of installation, this repo will focus on Steam version.
+
 The game also has multiple versions if you have closed alpha or closed beta access.
 OpenBeta no longer exists. If you dont know what this means, you will be using stable.
 
@@ -23,41 +26,20 @@ To chat about DCS World on Linux there is a Matrix chat available:
 ## Contents
 
    * [Installation](#installation)
-      * [Lutris](#getting-it-working-through-lutris)
-      * [Manual](#getting-it-working-manually)
    * [Bugs and Fixes](#known-issues-and-fixes)
-      * [Smoke](#white-smoke-and-some-other-particles-renders-weirdly)
-      * [F16 RWR](#f16-rwr-shows-a-opaque-square-on-the-rwr-over-the-priority-contact)
-      * [Server List](#missing-multiplayer-server-list)
-      * [F10 Crash](#crash-on-f10)
-      * [Disabled Modules](#module-disabled-by-user)
-      * [Controls](#control-issues)
+   * [Outdated fixes](#outdated-fixes)
    * [Additional Software](#other-software)
-      * [SRS](#srs)
-      * [Scratchpad](#dcs-scratchpad)
-      * [Opentrack](#headtracking-via-opentrack)
-      * [Linuxtrack](#headtracking-via-linuxtrack)
-      * [V4L2](#a-note-on-headtracking)
 
 ## Installation
 
-### Getting it working through Lutris
-
-An easy way to get started is to use Lutris. There are [two install scripts
-for standalone](https://lutris.net/games/dcs-world/) on Lutris which may just work out of the box.
-Much of this guide has been tested to work successfully with the 'Eagle Dynamics version'.
-
-### Getting it working manually
-
-Both versions need some winetricks applied. For standalone, use `winetricks`,
-for proton use `protontricks 223750`.
-
-Start the game once first to create the prefix, then run
-```
-<tricks command> vcrun2019 corefonts xact d3dcompiler_43
-```
-
-This should be all it takes to get standalone working.
+* Install the game.
+* Set steam compatibility options to 'Proton 9' or above.
+* Proton tricks should be applied. Install `protontricks` from your linux repository or via flatpak.
+* If you install from distro repo, the `<tricks_command>` will be `protontricks`
+* If installed with flatpak, the `<tricks_command>` will be `flatpak run com.github.Matoking.protontricks`.
+* Start the game once first to create the prefix. It will not start: probably hang or show a black window, or entire black screen. Finalize the game in steam.
+* Install additional protontricks packages via command line: `<tricks_command> 223750 vcrun2019 corefonts xact d3dcompiler_47` or open protontricks app and install those packages in the GUI.
+* Start the game again and check the problems below to fix them
 
 #### Fixing Steam version permanent crashing
 
@@ -200,6 +182,10 @@ will be disabled in steam too. This information is stored in
 Due to the various differences between distributions, issues with (HOTAS) controls can be hard to nail down,
 especially when Wine is involved - adding another layer of potentional problems. Users experiencing issues with
 controllers are advised to read through [the information here](https://github.com/bradley-r/Linux-Controller-Fixes/).
+
+## Outdated fixes
+
+Fixes from previous versions will be stored here. Maybe they can help someone but probably not needed anymore.
 
 ## Other software
 
