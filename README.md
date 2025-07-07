@@ -217,7 +217,7 @@ an installed font of your choosing, such as `CALIBRI.TTF`. Text should now appea
 Due to [issues with libwine](https://github.com/opentrack/opentrack/issues/1236), Opentrack does not support prefixes using versions of Wine
 different to that of the system (and thus the one Opentrack recognises), making usage of
 custom/performance-enhanced Wine versions impossible alongside it. Either run DCS with your
-system Wine, or try Linuxtrack instead. Proton is unaffected.**
+system Wine, or try Linuxtrack instead. Proton is unaffected. Installing Opentrack inside DCS' wine prefix (as a Windows app) may avoid this issue entirely.**
 
 [Opentrack](https://github.com/opentrack/opentrack) can emulate a gamepad which is read and can be mapped to the
 corresponding controls in the game. This should work out of the box, simply
