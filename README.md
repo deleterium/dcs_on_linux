@@ -112,8 +112,20 @@ To force update, use protontricks command `protontricks 223750 -f d3dcompiler_47
 
 ### White smoke and some other particles renders weirdly
 
-This is a long standing issue, most likely related to texture loading and tesselation. 
-Luckily, it is just a visual artefact that can be (largely) ignored.
+This is caused by DXVK. Remember that there is a translation between DX11 (used by the game) and Linux Vulkan API. Check "Using WineD3D (OpenGL) instead of Vulkan".
+
+### Game is slow after looking at F10 map
+
+F10 map causes a lot of textures to be loaded into memory, sometimes overflowing VRAM and even computer RAM. Sometimes it returns to normal by itself, other times you switch between aplications (Alt+Tab), or maybe if you look up at the sky. Try to lower graphics options to be less affected, of avoid DXVK entirely. 
+
+### Using WineD3D (OpenGL) instead of Vulkan
+
+It is possible that the game run faster in OpenGL than in Vulkan.
+Wine has internal transalation from DX to OpenGL, called WineD3D.
+While the default option is to use DXVL instead of WineD3D, Wine D3D option may be tested for old graphic cards or if you experience problems like stutters or low performance in multiplayer games.
+Add `PROTON_USE_WINED3D=1` at the beginning of launcher options.
+This solves the puffy contrails, but some textures can be weird, like some "burnt grass" or "golden grass" in Caucasus map.
+Otherwise, it seems to be very nice in Syria and Persian Gulf maps, where the 'F10 slowness' are frequent using default DXVK!
 
 ### F16 RWR shows a opaque square on the RWR over the priority contact
 
